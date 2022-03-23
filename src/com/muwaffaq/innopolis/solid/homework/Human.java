@@ -62,4 +62,12 @@ public class Human {
             nickname = name.concat(postFix);
         }
     }
+
+    static class RunHuman {
+        public static void main(String[] args) {
+            Human.PersonalLife human = new Human.PersonalLife();
+            System.out.println(human.sayHello(Human.PersonalLife.Languages.Arabic));
+        }
+    }
 }
+
