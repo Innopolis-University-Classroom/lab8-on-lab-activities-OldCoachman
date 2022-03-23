@@ -11,8 +11,4 @@ public interface Needs {
     void ownCompany();
 
     void becomeEmployee();
-
-
-
-
 }
