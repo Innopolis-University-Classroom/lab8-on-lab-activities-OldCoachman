@@ -7,38 +7,39 @@ public class Human {
     static class ImplementNeeds implements Needs {
         @Override
         public void ownCompany() {
-
+            // ...
         }
 
         @Override
         public void becomeEmployee() {
-
+            // ...
         }
 
         @Override
         public void pray() {
+            // ...
         }
 
         @Override
         public void playSports() {
+            // ...
 
         }
 
         @Override
         public void getMarried() {
-
+            // ...
         }
     }
 
     static class Info {
-        private String name;
-        public List<String> hobbies;
-        private String nickname;
-        private double salary;
+        protected String name;
+        protected List<String> hobbies;
+        protected String nickname;
+        protected double salary;
     }
 
-    public static class PersonalLife {
-        Info info = new Info();
+    public static class PersonalLife extends Info {
         public enum Languages {Arabic, English, Japanese}
 
         public String sayHello(Languages languages) {
@@ -48,19 +49,17 @@ public class Human {
         }
 
         int addHobby(String hobby) {
-            info.hobbies.add(hobby);
-            return info.hobbies.size();
+            hobbies.add(hobby);
+            return hobbies.size();
         }
     }
-    
-    static class BusinessLife {
-        Info info = new Info();
 
+    static class BusinessLife extends Info {
         void calculateTax(int percentage) {
-            info.salary = info.salary * percentage;
+            salary = salary * percentage;
         }
-        void creatNickName(String postFix) {
-            info.nickname = info.name.concat(postFix);
+        void createNickName(String postFix) {
+            nickname = name.concat(postFix);
         }
     }
 }
